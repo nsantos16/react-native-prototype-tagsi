@@ -1,4 +1,8 @@
 export default {
+  COMMON: {
+    loading: 'Cargando',
+    somethingWentWrong: 'Algo anduvo mal, intente de nuevo',
+  },
   SIGN_IN: {
     title: 'Iniciar sesión',
     email: 'Email',
@@ -15,7 +19,13 @@ export default {
     title: 'Registro',
     email: 'Email',
     password: 'Contraseña',
-    passwordConfirmation: 'Repetir contraseña',
-    button: 'Iniciar sesión',
+    age: 'Edad',
+    name: 'Nombre',
+    button: 'Registrarse',
+  },
+
+  TODO: {
+    placeholder: 'Agregar una tarea',
+    button: 'Añadir',
   },
 };

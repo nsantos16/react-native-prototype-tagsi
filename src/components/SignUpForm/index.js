@@ -14,9 +14,10 @@ import ErrorView from 'components/common/ErrorView';
 import styles from './styles';
 
 const FIELDS = {
+  name: 'name',
   email: 'email',
+  age: 'age',
   password: 'password',
-  passwordConfirmation: 'passwordConfirmation',
 };
 
 const SignUpForm = ({ onSubmit }) => {
@@ -61,6 +62,7 @@ const SignUpForm = ({ onSubmit }) => {
         testID="email-input"
         {...inputProps(FIELDS.email)}
       />
+      <Input label={strings.SIGN_UP.name} {...inputProps(FIELDS.name)} />
       <Input
         label={strings.SIGN_UP.password}
         secureTextEntry
@@ -68,10 +70,9 @@ const SignUpForm = ({ onSubmit }) => {
         {...inputProps(FIELDS.password)}
       />
       <Input
-        label={strings.SIGN_UP.passwordConfirmation}
-        secureTextEntry
+        label={strings.SIGN_UP.age}
         testID="confirm-password-input"
-        {...inputProps(FIELDS.passwordConfirmation)}
+        {...inputProps(FIELDS.age)}
       />
       <ErrorView errors={{ error }} />
       <View style={styles.button}>

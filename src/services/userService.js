@@ -2,15 +2,15 @@ import httpClient from 'httpClient';
 
 class UserService {
   login(user) {
-    return httpClient.post('/users/sign_in', user);
+    return httpClient.post('/user/login', user);
   }
 
   logout() {
-    return httpClient.delete('/users/sign_out', { data: {} });
+    return httpClient.post('/user/logout');
   }
 
   signUp(user) {
-    return httpClient.post('/users', user);
+    return httpClient.post('/user/register', user);
   }
 }
 

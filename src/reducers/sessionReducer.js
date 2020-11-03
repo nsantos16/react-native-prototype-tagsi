@@ -6,8 +6,9 @@ const initialState = {
   info: null,
 };
 
-const handleLoginSuccess = (state, { payload }) => {
-  state.user = payload;
+const handleLoginSuccess = (state, { payload: { user, token } }) => {
+  state.user = user;
+  state.info = { token };
 };
 
 const handleLogoutSuccess = () => {

@@ -15,7 +15,7 @@ export const login = createThunk('LOGIN', async user => {
 
 export const logout = createThunk('LOGOUT', async () => {
   try {
-    await userService.logout();
+    // await userService.logout();
   } catch ({ response }) {
     throw parseError(response);
   }
@@ -23,7 +23,7 @@ export const logout = createThunk('LOGOUT', async () => {
 
 export const signUp = createThunk('SIGNUP', async user => {
   try {
-    const { data } = await userService.signUp({ user });
+    const { data } = await userService.signUp({ ...user });
     return data;
   } catch ({ response }) {
     throw parseError(response);

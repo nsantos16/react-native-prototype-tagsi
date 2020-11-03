@@ -1,8 +1,4 @@
-# React Native Base
-
-![GHA CI Test](https://github.com/rootstrap/react-native-base/workflows/CI%20Test/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/8bb29bcea21bb5dda316/maintainability)](https://codeclimate.com/github/rootstrap/react-native-base/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8bb29bcea21bb5dda316/test_coverage)](https://codeclimate.com/github/rootstrap/react-native-base/test_coverage)
+# Prototipo React Native - TAGSI 2020
 
 ## Commands
 
@@ -51,12 +47,6 @@ keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddeb
 ```
 pod install
 ```
-
-## Configuring Code Climate
-
-1. After adding the project to CC, go to `Repo Settings`
-2. On the `Test Coverage` tab, copy the `Test Reporter ID`
-3. Replace the current value of `CC_TEST_REPORTER_ID` on the `config.yml file (.circleci/config.yml)` with the one you copied from CC
 
 ## Build Android Release
 

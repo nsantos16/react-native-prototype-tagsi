@@ -1,7 +1,7 @@
 import humps from 'humps';
-import { updateSession, logout } from 'actions/userActions';
+import { updateSession } from 'actions/userActions';
 
-const ACCESS_TOKEN = 'access-token';
+const ACCESS_TOKEN = 'Authorization';
 const UID = 'uid';
 const CLIENT = 'client';
 
@@ -12,12 +12,10 @@ export default (store, client) => {
     const { info } = store.getState().session;
     const { data, headers } = config;
     if (info) {
-      const { token, client, uid } = info;
+      const { token } = info;
       config.headers = {
         ...headers,
-        [ACCESS_TOKEN]: token,
-        client,
-        uid,
+        [ACCESS_TOKEN]: `Bearer ${token}`,
       };
     }
     config.data = humps.decamelizeKeys(data);
@@ -41,7 +39,7 @@ export default (store, client) => {
     },
     error => {
       if (error.response && error.response.status === UNAUTHORIZED) {
-        store.dispatch(logout());
+        // store.dispatch(logout());
       }
 
       return Promise.reject(error);

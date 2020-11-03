@@ -3,11 +3,13 @@ export default {
     presence: true,
     email: true,
   },
+  name: {
+    presence: true,
+  },
   password: {
     presence: true,
   },
-  passwordConfirmation: {
+  age: {
     presence: true,
-    equality: { attribute: 'password' },
   },
 };
